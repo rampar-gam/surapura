@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="gu">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>રામપર સુરપુરા મંદિર નિર્માણ સમયરેખા અને પ્રગતિ</title>
+
+  <style>
+    :root {
+      --primary: #b45309;
+      --bg: #fff7ed;
+      --card: #ffffff;
+      --text: #2b2b2b;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: "Noto Sans Gujarati", sans-serif; }
+
+    body { background: var(--bg); padding: 25px; color: var(--text); }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      background: var(--card);
+      border-radius: 20px;
+      padding: 40px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+    }
+
+    header { text-align: center; margin-bottom: 30px; }
+    header h1 { color: var(--primary); font-size: 34px; margin-bottom: 8px; }
+
+    section { margin-top: 40px; }
+
+    h2 {
+      color: var(--primary);
+      margin-bottom: 15px;
+      border-bottom: 3px solid var(--primary);
+      display: inline-block;
+      padding-bottom: 4px;
+    }
+
+    /* Timeline */
+    .timeline { border-left: 4px solid var(--primary); padding-left: 25px; }
+
+    .event {
+      position: relative;
+      background: #fff;
+      padding: 18px;
+      border-radius: 14px;
+      margin-bottom: 22px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    }
+
+    .event::before {
+      content: "";
+      width: 14px;
+      height: 14px;
+      background: var(--primary);
+      border-radius: 50%;
+      position: absolute;
+      left: -33px;
+      top: 20px;
+    }
+
+    .date { font-size: 13px; color: #666; }
+    .title { font-weight: bold; color: var(--primary); margin: 5px 0; }
+
+    /* ===== Gallery Controls ===== */
+    .gallery-controls {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      margin-top: 10px;
+      font-size: 12px;
+      flex-wrap: wrap;
+    }
+
+    .gallery-controls button {
+      padding: 4px 8px;
+      border-radius: 6px;
+      border: 1px solid #ddd;
+      background: #fafafa;
+      cursor: pointer;
+    }
+
+    /* ===== Gallery Layouts ===== */
+    .event-gallery {
+      display: grid;
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .event-gallery.grid { grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); }
+    .event-gallery.list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .event-gallery img {
+      width: 100%;
+      aspect-ratio: 1 / 1; /* square */
+      object-fit: cover;
+      border-radius: 12px;
+      cursor: pointer;
+    }
+
+    .event-gallery.list img {
+      height: 160px;
+    }
+
+    figure { text-align: center; }
+    figcaption { font-size: 10px; color: #555; }
+
+    /* ===== Modal ===== */
+    .modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.9);
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+
+    .modal.show { display: flex; }
+    .modal img { max-width: 95%; max-height: 95%; }
+
+    /* ===== Donor Table Styling ===== */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 12px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+
+    th, td {
+      border: 1px solid #eee;
+      padding: 10px 12px;
+      font-size: 14px;
+    }
+
+    th {
+      background: var(--primary);
+      color: white;
+      text-align: center;
+      font-weight: 600;
+    }
+
+    tbody tr:nth-child(even){ background:#fff7ed; }
+    tbody tr:hover{ background:#fdebd3; }
+
+    td:nth-child(1), td:nth-child(5){ text-align:center; font-weight:600; }
+
+    .donor-total{
+      margin-top:8px;
+      font-weight:700;
+      color:var(--primary);
+      text-align:right;
+    }
+
+    /* Progress */
+    .progress-bar { width: 100%; height: 25px; background: #eee; border-radius: 20px; overflow: hidden; }
+    .progress-fill { height: 100%; width: 60%; background: var(--primary); color: white; text-align: center; line-height: 25px; }
+
+    @media print {
+      input, button { display: none; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+    <header>
+      <h1>રામપર સુરપુરા મંદિર નિર્માણ સમયરેખા અને પ્રગતિ</h1>
+      <p>સમયરેખા • દાનદાતા • ફોટા • ખર્ચ</p>
+    </header>
+
+    <section>
+      <h2>સમયરેખા</h2>
+
+      <div class="timeline" id="timeline">
+
+        <div class="event" data-date="2025-01-01">
+          <div class="date">01-01-2025</div>
+          <div class="title">ભૂમિ પૂજન</div>
+          <div>શિલાન્યાસ અને પૂજા વિધિ</div>
+
+          <!-- Controls (works directly with images below) -->
+          <div class="gallery-controls">
+            <button onclick="setLayout(this,'grid')">Grid</button>
+            <button onclick="setLayout(this,'list')">List</button>
+            <button onclick="startSlideshow(this)">Slideshow</button>
+          </div>
+
+          <div class="event-gallery grid">
+            <figure><img src="https://yavuzceliker.github.io/sample-images/image-10.jpg"><figcaption>image-10.jpg</figcaption></figure>
+            <figure><img src="https://yavuzceliker.github.io/sample-images/image-20.jpg"><figcaption>image-20.jpg</figcaption></figure>
+            <figure><img src="https://yavuzceliker.github.io/sample-images/image-30.jpg"><figcaption>image-30.jpg</figcaption></figure>
+          </div>
+        </div>
+
+        <div class="event" data-date="2025-01-02">
+          <div class="date">02-01-2025</div>
+          <div class="title">બાંધકામ પ્રારંભ</div>
+          <div>પાયા અને માળખાનું કામ</div>
+
+          <div class="gallery-controls">
+            <button onclick="setLayout(this,'grid')">Grid</button>
+            <button onclick="setLayout(this,'list')">List</button>
+            <button onclick="startSlideshow(this)">Slideshow</button>
+          </div>
+
+          <div class="event-gallery grid">
+            <figure><img src="https://yavuzceliker.github.io/sample-images/image-40.jpg"><figcaption>image-40.jpg</figcaption></figure>
+            <figure><img src="https://yavuzceliker.github.io/sample-images/image-50.jpg"><figcaption>image-50.jpg</figcaption></figure>
+            <figure><img src="https://yavuzceliker.github.io/sample-images/image-60.jpg"><figcaption>image-60.jpg</figcaption></figure>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section>
+      <h2>દાતાશ્રી યાદી (Datashree List)</h2>
+      <table>
+        <tr>
+          <th>ક્રમ</th>
+          <th>નામ</th>
+          <th>ગામ/શહેર</th>
+          <th>સંપર્ક</th>
+          <th>દાન રકમ (₹)</th>
+        </tr>
+        <tr><td>1</td><td>રમેશભાઈ પટેલ</td><td>રાજકોટ</td><td>9876543210</td><td>51,000</td></tr>
+        <tr><td>2</td><td>સુરેશભાઈ શાહ</td><td>અમદાવાદ</td><td>9898989898</td><td>21,000</td></tr>
+        <tr><td>3</td><td>મહેશભાઈ દેસાઈ</td><td>સુરત</td><td>9825000000</td><td>11,000</td></tr>
+      </table>
+      <div class="donor-total">કુલ દાન: ₹ 83,000</div>
+    </section>
+
+    <section>
+      <h2>ખર્ચ અને પ્રગતિ</h2>
+      <div class="progress-bar"><div class="progress-fill">60%</div></div>
+    </section>
+
+  </div>
+
+  <div class="modal" id="imgModal" onclick="closeModal()">
+    <img id="modalImg" />
+  </div>
+
+  <script>
+    /* add photos */
+    function addEventPhotos(input) {
+      const gallery = input.parentElement.querySelector('.event-gallery');
+      const files = input.files;
+
+      for (let file of files) {
+        const reader = new FileReader();
+        reader.onload = e => {
+          const fig = document.createElement('figure');
+          fig.innerHTML = `<img src="${e.target.result}"><figcaption>${file.name}</figcaption>`;
+          gallery.appendChild(fig);
+        };
+        reader.readAsDataURL(file);
+      }
+    }
+
+    /* slider size */
+    
+
+    /* layout toggle */
+    function setLayout(btn, type){
+      const gallery = btn.closest('.event').querySelector('.event-gallery');
+      gallery.classList.remove('grid','list');
+      gallery.classList.add(type);
+    }
+
+    /* modal zoom */
+    document.addEventListener('dblclick', e => {
+      if(e.target.tagName === 'IMG') openModal(e.target.src);
+    });
+
+    function openModal(src){
+      document.getElementById('modalImg').src = src;
+      document.getElementById('imgModal').classList.add('show');
+    }
+
+    function closeModal(){
+      document.getElementById('imgModal').classList.remove('show');
+      clearInterval(window.slideTimer);
+    }
+
+    /* slideshow */
+    function startSlideshow(btn){
+      const imgs = btn.closest('.event').querySelectorAll('.event-gallery img');
+      if(!imgs.length) return;
+
+      let i = 0;
+      openModal(imgs[0].src);
+
+      clearInterval(window.slideTimer);
+      window.slideTimer = setInterval(()=>{
+        i = (i+1) % imgs.length;
+        document.getElementById('modalImg').src = imgs[i].src;
+      },1500);
+    }
+  </script>
+
+</body>
+</html>
