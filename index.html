@@ -154,6 +154,21 @@ th{background:var(--primary);color:white;}
 .modal.show{display:flex;}
 .modal img{max-width:95%;max-height:95%;}
 
+/* ===== MAP ===== */
+.map-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+}
+
+.map-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
 
 /* ===== CARD VIEW ===== */
 .card-grid{
@@ -198,8 +213,16 @@ th{background:var(--primary);color:white;}
   <p>
     રામપર ગામમાં સુરપુરા મંદિરનું નિર્માણ કાર્ય ચાલુ છે.  અહીં મંદિરની સમયરેખા, દાતાશ્રી યાદી, વિડિયો અને અન્ય માહિતી ઉપલબ્ધ છે.
   </p>
-  <img src="https://rampar-gam.github.io/surapura/images/Rampar.jpg"
-       style="width:100%;border-radius:16px;margin-top:20px;">
+
+<div class="map-container">
+  <iframe 
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27052.613356088765!2d70.16751495000001!3d22.192974949999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395776931ddeb3c9%3A0xf2878fdedfea9553!2sRampar%2C%20Gujarat!5e1!3m2!1sen!2sin!4v1770919872639!5m2!1sen!2sin"
+    allowfullscreen
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+</div>
+
 </div>
 
 <!-- ===== TIMELINE TAB ===== -->
@@ -207,6 +230,85 @@ th{background:var(--primary);color:white;}
   <h2>સમયરેખા</h2>
 
   <div class="timeline">
+
+    <div class="event">
+      <div><strong>01-01-2025 • ખાતમુહૂર્ત</strong></div>
+      <p>મંદિરના નિર્માણ કાર્ય પૂર્ણ થવાના શુભ અવસરે આયોજિત ધાર્મિક વિધિ.</p>      
+      <div class="gallery-controls">
+        <button onclick="startSlideshow(this)">Play</button>
+      </div>
+      <div class="event-gallery grid">
+        <img src="https://rampar-gam.github.io/surapura/images/1%20Khatmuhurta%20(1).jpeg">
+        <img src="https://rampar-gam.github.io/surapura/images/1%20Khatmuhurta%20(2).jpeg">
+      </div>
+    </div>
+
+    <div class="event">
+      <div><strong>01-01-2025 • સફાઈ</strong></div>
+      <p>મંદિર પરિસર, આસપાસનો વિસ્તાર અને નિર્માણ સ્થળની સંપૂર્ણ સ્વચ્છતા. </p>      
+      <div class="gallery-controls">
+        <button onclick="startSlideshow(this)">Play</button>
+      </div>
+      <div class="event-gallery grid">
+        <img src="https://rampar-gam.github.io/surapura/images/2%20SafSafai%20(1).jpeg">
+        <img src="https://rampar-gam.github.io/surapura/images/2%20SafSafai%20(2).jpeg">
+        <img src="https://rampar-gam.github.io/surapura/images/2%20SafSafai%20(3).jpeg">
+        <img src="https://rampar-gam.github.io/surapura/images/2%20SafSafai%20(4).jpeg">
+        <img src="https://rampar-gam.github.io/surapura/images/2%20SafSafai%20(5).jpeg">
+        <img src="https://rampar-gam.github.io/surapura/images/2%20SafSafai%20(6).jpeg">
+        <img src="https://rampar-gam.github.io/surapura/images/2%20SafSafai%20(7).jpeg">
+        <img src="https://rampar-gam.github.io/surapura/images/2%20SafSafai%20(8).jpeg">
+        <img src="https://rampar-gam.github.io/surapura/images/2%20SafSafai%20(9).jpeg">
+      </div>
+    </div>
+
+    <div class="event">
+      <div><strong>01-01-2025 • મીટિંગ</strong></div>
+      <p>સભ્યો વચ્ચે યોજાતી બેઠક. તેમાં આયોજન, ખર્ચ, સમયપત્રક અને ભવિષ્યના કાર્યો અંગે ચર્ચા કરવામાં આવે છે.</p>      
+      <div class="gallery-controls">
+        <button onclick="startSlideshow(this)">Play</button>
+      </div>
+      <div class="event-gallery grid">
+        <img src="https://rampar-gam.github.io/surapura/images/3%20Meeting%20(1).jpeg">
+        <img src="https://rampar-gam.github.io/surapura/images/3%20Meeting%20(2).jpeg">
+      </div>
+    </div>
+
+    <div class="event">
+      <div><strong>01-01-2025 • ભૂમિ પૂજન</strong></div>
+      <p>મંદિર નિર્માણ શરૂ કરતા પહેલાં કરવામાં આવતી પવિત્ર વિધિ. દેવી-દેવતાઓના આશીર્વાદ સાથે કાર્યની શુભ શરૂઆત માટે ભૂમિનું પૂજન કરવામાં આવે છે.</p>      
+      <div class="gallery-controls">
+        <button onclick="startSlideshow(this)">Play</button>
+      </div>
+      <div class="event-gallery grid">
+        <img src="https://rampar-gam.github.io/surapura/images/4%20Bhumipujan%20(1).jpeg">
+        <img src="https://rampar-gam.github.io/surapura/images/4%20Bhumipujan%20(2).jpeg">
+        <img src="https://rampar-gam.github.io/surapura/images/4%20Bhumipujan%20(3).jpeg">
+        <img src="https://rampar-gam.github.io/surapura/images/4%20Bhumipujan%20(4).jpeg">
+        <img src="https://rampar-gam.github.io/surapura/images/4%20Bhumipujan%20(5).jpeg">
+        <img src="https://rampar-gam.github.io/surapura/images/4%20Bhumipujan%20(6).jpeg">
+        <img src="https://rampar-gam.github.io/surapura/images/4%20Bhumipujan%20(7).jpeg">
+        <img src="https://rampar-gam.github.io/surapura/images/4%20Bhumipujan%20(9).jpeg">
+        <img src="https://rampar-gam.github.io/surapura/images/4%20Bhumipujan%20(10).jpeg">
+        <img src="https://rampar-gam.github.io/surapura/images/4%20Bhumipujan%20(11).jpeg">
+        <img src="https://rampar-gam.github.io/surapura/images/4%20Bhumipujan%20(12).jpeg">
+        <img src="https://rampar-gam.github.io/surapura/images/4%20Bhumipujan%20(13).jpeg">
+        <img src="https://rampar-gam.github.io/surapura/images/4%20Bhumipujan%20(14).jpeg">
+        <img src="https://rampar-gam.github.io/surapura/images/4%20Bhumipujan%20(15).jpeg">
+      </div>
+    </div>
+
+    <div class="event">
+      <div><strong>01-01-2025 • મીટિંગ</strong></div>
+      <p>સભ્યો વચ્ચે યોજાતી બેઠક. તેમાં આયોજન, ખર્ચ, સમયપત્રક અને ભવિષ્યના કાર્યો અંગે ચર્ચા કરવામાં આવે છે.</p>      
+      <div class="gallery-controls">
+        <button onclick="startSlideshow(this)">Play</button>
+      </div>
+      <div class="event-gallery grid">
+        <img src="https://rampar-gam.github.io/surapura/images/5%20Meeting%20(1).jpeg">
+        <img src="https://rampar-gam.github.io/surapura/images/5%20Meeting%20(2).jpeg">
+      </div>
+    </div>
 
     <div class="event">
       <div><strong>01-01-2025 • બાંધકામ</strong></div>
@@ -234,97 +336,7 @@ th{background:var(--primary);color:white;}
       </div>
     </div>
 	
-    <div class="event">
-      <div><strong>01-01-2025 • મીટિંગ</strong></div>
-      <p>સભ્યો વચ્ચે યોજાતી બેઠક. તેમાં આયોજન, ખર્ચ, સમયપત્રક અને ભવિષ્યના કાર્યો અંગે ચર્ચા કરવામાં આવે છે.</p>      
-      <div class="gallery-controls">
-        <button onclick="startSlideshow(this)">Play</button>
-      </div>
-      <div class="event-gallery grid">
-        <img src="https://rampar-gam.github.io/surapura/images/5%20Meeting%20(1).jpeg">
-        <img src="https://rampar-gam.github.io/surapura/images/5%20Meeting%20(2).jpeg">
-      </div>
-    </div>
-	
-    <div class="event">
-      <div><strong>01-01-2025 • ભૂમિ પૂજન</strong></div>
-      <p>મંદિર નિર્માણ શરૂ કરતા પહેલાં કરવામાં આવતી પવિત્ર વિધિ. દેવી-દેવતાઓના આશીર્વાદ સાથે કાર્યની શુભ શરૂઆત માટે ભૂમિનું પૂજન કરવામાં આવે છે.</p>      
-      <div class="gallery-controls">
-        <button onclick="startSlideshow(this)">Play</button>
-      </div>
-      <div class="event-gallery grid">
-        <img src="https://rampar-gam.github.io/surapura/images/4%20Bhumipujan%20(1).jpeg">
-        <img src="https://rampar-gam.github.io/surapura/images/4%20Bhumipujan%20(2).jpeg">
-        <img src="https://rampar-gam.github.io/surapura/images/4%20Bhumipujan%20(3).jpeg">
-        <img src="https://rampar-gam.github.io/surapura/images/4%20Bhumipujan%20(4).jpeg">
-        <img src="https://rampar-gam.github.io/surapura/images/4%20Bhumipujan%20(5).jpeg">
-        <img src="https://rampar-gam.github.io/surapura/images/4%20Bhumipujan%20(6).jpeg">
-        <img src="https://rampar-gam.github.io/surapura/images/4%20Bhumipujan%20(7).jpeg">
-        <img src="https://rampar-gam.github.io/surapura/images/4%20Bhumipujan%20(9).jpeg">
-        <img src="https://rampar-gam.github.io/surapura/images/4%20Bhumipujan%20(10).jpeg">
-        <img src="https://rampar-gam.github.io/surapura/images/4%20Bhumipujan%20(11).jpeg">
-        <img src="https://rampar-gam.github.io/surapura/images/4%20Bhumipujan%20(12).jpeg">
-        <img src="https://rampar-gam.github.io/surapura/images/4%20Bhumipujan%20(13).jpeg">
-        <img src="https://rampar-gam.github.io/surapura/images/4%20Bhumipujan%20(14).jpeg">
-        <img src="https://rampar-gam.github.io/surapura/images/4%20Bhumipujan%20(15).jpeg">
-      </div>
-    </div>
-	
-    <div class="event">
-      <div><strong>01-01-2025 • મીટિંગ</strong></div>
-      <p>સભ્યો વચ્ચે યોજાતી બેઠક. તેમાં આયોજન, ખર્ચ, સમયપત્રક અને ભવિષ્યના કાર્યો અંગે ચર્ચા કરવામાં આવે છે.</p>      
-      <div class="gallery-controls">
-        <button onclick="startSlideshow(this)">Play</button>
-      </div>
-      <div class="event-gallery grid">
-        <img src="https://rampar-gam.github.io/surapura/images/3%20Meeting%20(1).jpeg">
-        <img src="https://rampar-gam.github.io/surapura/images/3%20Meeting%20(2).jpeg">
-      </div>
-    </div>
-	
-    <div class="event">
-      <div><strong>01-01-2025 • સફાઈ</strong></div>
-      <p>મંદિર પરિસર, આસપાસનો વિસ્તાર અને નિર્માણ સ્થળની સંપૂર્ણ સ્વચ્છતા. </p>      
-      <div class="gallery-controls">
-        <button onclick="startSlideshow(this)">Play</button>
-      </div>
-      <div class="event-gallery grid">
-        <img src="https://rampar-gam.github.io/surapura/images/2%20SafSafai%20(1).jpeg">
-        <img src="https://rampar-gam.github.io/surapura/images/2%20SafSafai%20(2).jpeg">
-        <img src="https://rampar-gam.github.io/surapura/images/2%20SafSafai%20(3).jpeg">
-        <img src="https://rampar-gam.github.io/surapura/images/2%20SafSafai%20(4).jpeg">
-        <img src="https://rampar-gam.github.io/surapura/images/2%20SafSafai%20(5).jpeg">
-        <img src="https://rampar-gam.github.io/surapura/images/2%20SafSafai%20(6).jpeg">
-        <img src="https://rampar-gam.github.io/surapura/images/2%20SafSafai%20(7).jpeg">
-        <img src="https://rampar-gam.github.io/surapura/images/2%20SafSafai%20(8).jpeg">
-        <img src="https://rampar-gam.github.io/surapura/images/2%20SafSafai%20(9).jpeg">
-      </div>
-    </div>
-	
-    <div class="event">
-      <div><strong>01-01-2025 • ખાતમુહૂર્ત</strong></div>
-      <p>મંદિરના નિર્માણ કાર્ય પૂર્ણ થવાના શુભ અવસરે આયોજિત ધાર્મિક વિધિ.</p>      
-      <div class="gallery-controls">
-        <button onclick="startSlideshow(this)">Play</button>
-      </div>
-      <div class="event-gallery grid">
-        <img src="https://rampar-gam.github.io/surapura/images/1%20Khatmuhurta%20(1).jpeg">
-        <img src="https://rampar-gam.github.io/surapura/images/1%20Khatmuhurta%20(2).jpeg">
-      </div>
-    </div>
-	
-	
   </div>
-</div>
-
-<!-- ===== DONORS TAB ===== -->
-<div id="donors" class="tab">
-  <h2>દાતાશ્રી યાદી</h2>
-  <table>
-    <tr><th>ક્રમ</th><th>નામ</th><th>ગામ</th><th>દાન ₹</th></tr>
-    <tr><td>0</td><td>સાવલિયા પરિવાર</td><td>રાજકોટ</td><td>10,00,000</td></tr>
-    <tr><td>1</td><td>ધનશ્યામભાઈ નારણભાઈ સાવલિયા [ટેક્સી]</td><td>સુરત</td><td>90,000</td></tr>
-  </table>
 </div>
 
 <!-- ===== VIDEO TAB ===== -->
@@ -375,6 +387,17 @@ th{background:var(--primary);color:white;}
   </div>
 </div>
 
+<!-- ===== DONORS TAB ===== -->
+<div id="donors" class="tab">
+  <h2>દાતાશ્રી યાદી</h2>
+  <table>
+    <tr><th>ક્રમ</th><th>નામ</th><th>ગામ</th><th>દાન ₹</th></tr>
+    <tr><td>1</td><td>ધનશ્યામભાઈ નારણભાઈ સાવલિયા [ટેક્સી]</td><td>સુરત</td><td>101,000</td></tr>
+  </table>
+  <p style="margin-top:15px; font-weight:bold; color:#8B0000;">
+    નોંધ: સાવલિયા પરિવાર દ્વારા મંદિરના બાંધકામ તથા અન્ય ખર્ચ માટે દાન આપવામાં આવ્યું છે.
+  </p>
+</div>
 
 <!-- DETAILS CARD VIEW -->
 <div id="details" class="tab">
