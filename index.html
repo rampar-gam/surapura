@@ -202,19 +202,63 @@ th{background:var(--primary);color:white;}
 .card:hover{ transform:translateY(-5px); }
 .card h3{ color:var(--primary); margin-bottom:10px; }
 .card a{ color:#b45309; text-decoration:none; font-weight:500; }
+
+/* ===== MOBILE VIEW ===== */
+.menu-toggle{
+  display:none;
+  color:white;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+.menu-links{
+  display:flex;
+  gap:25px;
+}
+
+@media (max-width:768px){
+
+  .menubar{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
+  .menu-toggle{
+    display:block;
+  }
+
+  .menu-links{
+    display:none;
+    flex-direction:column;
+    width:100%;
+    gap:15px;
+    margin-top:10px;
+  }
+
+  .menu-links a{
+    padding:8px 0;
+  }
+
+  .menu-links.show{
+    display:flex;
+  }
+}
 </style>
 </head>
 
 <body>
 
 <nav class="menubar">
-  <a class="active" onclick="showTab('home',this)">હોમ</a>
-  <a onclick="showTab('timeline',this)">સમયરેખા</a>
-  <a onclick="showTab('videos',this)">વિડિયો</a>
-  <a onclick="showTab('donors',this)">દાતાશ્રી</a>
-  <a onclick="showTab('committee',this)">કમિટી સભ્યો</a>
-  <a onclick="showTab('shreebharadimaa',this)">ભરાડી માતાજી</a>
-  <a onclick="showTab('details',this)">પ્રેરણાદાયક મંદિર</a>
+  <div class="menu-toggle" onclick="toggleMenu()">☰ મેનુ</div>
+  <div class="menu-links">
+    <a class="active" onclick="showTab('home',this)">હોમ</a>
+    <a onclick="showTab('timeline',this)">સમયરેખા</a>
+    <a onclick="showTab('videos',this)">વિડિયો</a>
+    <a onclick="showTab('donors',this)">દાતાશ્રી</a>
+    <a onclick="showTab('committee',this)">કમિટી સભ્યો</a>
+    <a onclick="showTab('shreebharadimaa',this)">ભરાડી માતાજી</a>
+    <a onclick="showTab('details',this)">પ્રેરણાદાયક મંદિર</a>
+  </div>
 </nav>
 
 
@@ -572,6 +616,11 @@ function startSlideshow(btn){
     i=(i+1)%imgs.length;
     modalImg.src=imgs[i].src;
   },1500);
+}
+
+
+function toggleMenu(){
+  document.querySelector('.menu-links').classList.toggle('show');
 }
 
 /* modal */
