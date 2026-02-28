@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>રામપર સુરપુરા મંદિર નિર્માણ</title>
+<title>રામપર સુરપુરા બાપા મંદિર નિર્માણ</title>
 
 <style>
 :root{
@@ -170,6 +170,21 @@ th{background:var(--primary);color:white;}
   border: 0;
 }
 
+/* ===== Button VIEW ===== */
+.play-btn {
+  background-color: red;
+  color: red;
+  border: black;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.play-btn:hover {
+  background-color: black;
+}
+
 /* ===== CARD VIEW ===== */
 .card-grid{
   display:grid;
@@ -197,6 +212,8 @@ th{background:var(--primary);color:white;}
   <a onclick="showTab('timeline',this)">સમયરેખા</a>
   <a onclick="showTab('videos',this)">વિડિયો</a>
   <a onclick="showTab('donors',this)">દાતાશ્રી</a>
+  <a onclick="showTab('committee',this)">કમિટી સભ્યો</a>
+  <a onclick="showTab('shreebharadimaa',this)">ભરાડી માતાજી</a>
   <a onclick="showTab('details',this)">પ્રેરણાદાયક મંદિર</a>
 </nav>
 
@@ -204,15 +221,15 @@ th{background:var(--primary);color:white;}
 <div class="container">
 
 <header>
-  <h1>રામપર સુરપુરા મંદિર નિર્માણ</h1>
+  <h1>રામપર સુરપુરા બાપા મંદિર નિર્માણ</h1>
 </header>
 
 <!-- HOME -->
 <div id="home" class="tab active">
-  <h2>રામપર સુરપુરા મંદિર</h2>
-  <p>
-    રામપર ગામમાં સુરપુરા મંદિરનું નિર્માણ કાર્ય ચાલુ છે.  અહીં મંદિરની સમયરેખા, દાતાશ્રી યાદી, વિડિયો અને અન્ય માહિતી ઉપલબ્ધ છે.
-  </p>
+  <h2>રામપર સુરપુરા બાપા મંદિર</h2>
+	<h3> રામપર સાવલિયા પરિવારના સુરાપુરા બાપાની પ્રાણ પ્રતિષ્ઠાની તારીખ ૮ મે ૨૦૨૬ (શુક્રવાર) થી ૧૦ મે ૨૦૨૬ (રવિવાર) રાખેલ છે.  </h3>
+	<p> રામપર ગામમાં સુરપુરા બાપા મંદિરનું નિર્માણ કાર્ય ચાલુ છે.   </p>
+	<p> અહીં મંદિરની સમયરેખા, દાતાશ્રી યાદી, કમિટી સભ્યો, વિડિયો અને અન્ય માહિતી ઉપલબ્ધ છે. </p>
 
 <div class="map-container">
   <iframe 
@@ -232,10 +249,10 @@ th{background:var(--primary);color:white;}
   <div class="timeline">
 
     <div class="event">
-      <div><strong>01-01-2025 • ખાતમુહૂર્ત</strong></div>
+      <div><strong>18-10-2025 • ખાતમુહૂર્ત</strong></div>
       <p>મંદિરના નિર્માણ કાર્ય પૂર્ણ થવાના શુભ અવસરે આયોજિત ધાર્મિક વિધિ.</p>      
       <div class="gallery-controls">
-        <button onclick="startSlideshow(this)">Play</button>
+        <button class="play-btn" onclick="startSlideshow(this)">Play</button>
       </div>
       <div class="event-gallery grid">
         <img src="https://rampar-gam.github.io/surapura/images/1%20Khatmuhurta%20(1).jpeg">
@@ -244,10 +261,10 @@ th{background:var(--primary);color:white;}
     </div>
 
     <div class="event">
-      <div><strong>01-01-2025 • સફાઈ</strong></div>
+      <div><strong>18-10-2025 • સફાઈ</strong></div>
       <p>મંદિર પરિસર, આસપાસનો વિસ્તાર અને નિર્માણ સ્થળની સંપૂર્ણ સ્વચ્છતા. </p>      
       <div class="gallery-controls">
-        <button onclick="startSlideshow(this)">Play</button>
+        <button class="play-btn" onclick="startSlideshow(this)">Play</button>
       </div>
       <div class="event-gallery grid">
         <img src="https://rampar-gam.github.io/surapura/images/2%20SafSafai%20(1).jpeg">
@@ -263,10 +280,10 @@ th{background:var(--primary);color:white;}
     </div>
 
     <div class="event">
-      <div><strong>01-01-2025 • મીટિંગ</strong></div>
+      <div><strong>20-10-2025 • મીટિંગ</strong></div>
       <p>સભ્યો વચ્ચે યોજાતી બેઠક. તેમાં આયોજન, ખર્ચ, સમયપત્રક અને ભવિષ્યના કાર્યો અંગે ચર્ચા કરવામાં આવે છે.</p>      
       <div class="gallery-controls">
-        <button onclick="startSlideshow(this)">Play</button>
+        <button class="play-btn" onclick="startSlideshow(this)">Play</button>
       </div>
       <div class="event-gallery grid">
         <img src="https://rampar-gam.github.io/surapura/images/3%20Meeting%20(1).jpeg">
@@ -275,10 +292,10 @@ th{background:var(--primary);color:white;}
     </div>
 
     <div class="event">
-      <div><strong>01-01-2025 • ભૂમિ પૂજન</strong></div>
+      <div><strong>27-10-2025 • ભૂમિ પૂજન</strong></div>
       <p>મંદિર નિર્માણ શરૂ કરતા પહેલાં કરવામાં આવતી પવિત્ર વિધિ. દેવી-દેવતાઓના આશીર્વાદ સાથે કાર્યની શુભ શરૂઆત માટે ભૂમિનું પૂજન કરવામાં આવે છે.</p>      
       <div class="gallery-controls">
-        <button onclick="startSlideshow(this)">Play</button>
+        <button class="play-btn" onclick="startSlideshow(this)">Play</button>
       </div>
       <div class="event-gallery grid">
         <img src="https://rampar-gam.github.io/surapura/images/4%20Bhumipujan%20(1).jpeg">
@@ -299,10 +316,10 @@ th{background:var(--primary);color:white;}
     </div>
 
     <div class="event">
-      <div><strong>01-01-2025 • મીટિંગ</strong></div>
+      <div><strong>31-10-2025 • મીટિંગ</strong></div>
       <p>સભ્યો વચ્ચે યોજાતી બેઠક. તેમાં આયોજન, ખર્ચ, સમયપત્રક અને ભવિષ્યના કાર્યો અંગે ચર્ચા કરવામાં આવે છે.</p>      
       <div class="gallery-controls">
-        <button onclick="startSlideshow(this)">Play</button>
+        <button class="play-btn" onclick="startSlideshow(this)">Play</button>
       </div>
       <div class="event-gallery grid">
         <img src="https://rampar-gam.github.io/surapura/images/5%20Meeting%20(1).jpeg">
@@ -311,10 +328,10 @@ th{background:var(--primary);color:white;}
     </div>
 
     <div class="event">
-      <div><strong>01-01-2025 • બાંધકામ</strong></div>
+      <div><strong>23-01-2026 • બાંધકામ</strong></div>
       <p>મંદિરના માળખાનું આયોજનબદ્ધ નિર્માણ કાર્ય. તેમાં પાયાની કામગીરી, દિવાલો, ગર્ભગૃહ તથા અન્ય રચનાત્મક ભાગોનો સમાવેશ થાય છે.</p>      
       <div class="gallery-controls">
-        <button onclick="startSlideshow(this)">Play</button>
+        <button class="play-btn" onclick="startSlideshow(this)">Play</button>
       </div>
       <div class="event-gallery grid">
         <img src="https://rampar-gam.github.io/surapura/images/6%20Bandhkam%20(1).jpeg">
@@ -337,6 +354,68 @@ th{background:var(--primary);color:white;}
     </div>
 	
   </div>
+</div>
+
+<!-- ===== Bharadi Mata TAB ===== -->
+<div id="shreebharadimaa" class="tab">
+  <h2>ભરાડી માતાજી</h2>
+
+  <div class="timeline">
+
+    <div class="event">
+      <div><strong>પહેલાનું મંદિર</strong></div>
+      <p>શ્રી ભરાડી માતાજીનું પહેલાનું મંદિર ઐતિહાસિક મહત્વ મહત્વ ધરાવે છે. તે સમયમાં મંદિર સરળ રચનાવાળું અને ગામના ભક્તોના સહયોગથી બનાવાયેલું હતું.</p>      
+      <div class="gallery-controls">
+        <button class="play-btn" onclick="startSlideshow(this)">Play</button>
+      </div>
+      <div class="event-gallery grid">
+        <img src="https://rampar-gam.github.io/surapura/jay-bharadi-maa/1.jpg">
+        <img src="https://rampar-gam.github.io/surapura/jay-bharadi-maa/2.jpg">
+        <img src="https://rampar-gam.github.io/surapura/jay-bharadi-maa/3.jpg">
+      </div>
+    </div>
+
+    <div class="event">
+      <div><strong>હાલનું મંદિર</strong></div>
+      <p>હાલમાં ભરાડી આઈ માતાજીનું મંદિર નવીન સ્વરૂપમાં નિર્માણ પામ્યું છે. મંદિર પરિસર સ્વચ્છ, શાંત અને આધ્યાત્મિક વાતાવરણથી ભરપૂર છે, જે ભક્તોને શાંતિ અને આનંદનો અનુભવ કરાવે છે.</p>      
+      <div class="gallery-controls">
+        <button class="play-btn" onclick="startSlideshow(this)">Play</button>
+      </div>
+      <div class="event-gallery grid">
+        <img src="https://rampar-gam.github.io/surapura/jay-bharadi-maa/4.jpg">
+        <img src="https://rampar-gam.github.io/surapura/jay-bharadi-maa/5.jpg">
+        <img src="https://rampar-gam.github.io/surapura/jay-bharadi-maa/6.jpg">
+        <img src="https://rampar-gam.github.io/surapura/jay-bharadi-maa/7.jpg">
+        <img src="https://rampar-gam.github.io/surapura/jay-bharadi-maa/8.jpg">
+        <img src="https://rampar-gam.github.io/surapura/jay-bharadi-maa/9.jpg">
+      </div>
+    </div>
+	
+  </div>
+</div>
+
+<!-- ===== COMMITTEE MEMBERS TAB ===== -->
+<div id="committee" class="tab">
+  <h2>કમિટી સભ્યોની યાદી</h2>
+  
+  <table>
+    <tr>
+      <th>ક્રમ</th>
+      <th>નામ</th>
+      <th>સંપર્ક નંબર</th>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>કાંતિલાલભાઈ નાથાભાઈ સાવલિયા</td>
+      <td>+919879297922</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>નવનીતભાઈ ગોવિંદભાઈ સાવલિયા</td>
+      <td>+919824686942</td>
+    </tr>
+  </table>
+
 </div>
 
 <!-- ===== VIDEO TAB ===== -->
