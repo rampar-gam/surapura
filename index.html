@@ -227,21 +227,24 @@ th{background:var(--primary);color:white;}
     display:block;
   }
 
-  .menu-links{
-    display:none;
-    flex-direction:column;
-    width:100%;
-    gap:15px;
-    margin-top:10px;
-  }
+	.menu-links{
+	  display:none;
+	  grid-template-columns:repeat(2,1fr);
+	  gap:10px;
+	  width:100%;
+	  margin-top:10px;
+	}
 
-  .menu-links a{
-    padding:8px 0;
-  }
+	.menu-links a{
+	  background:rgba(255,255,255,0.15);
+	  padding:10px;
+	  border-radius:8px;
+	  text-align:center;
+	}
 
-  .menu-links.show{
-    display:flex;
-  }
+	.menu-links.show{
+	  display:grid;
+	}
 }
 </style>
 </head>
